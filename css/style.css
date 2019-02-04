@@ -53,23 +53,27 @@ li {
 
 .wrapper-header {
   display: flex;
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .main-header-top {
 	height: 42px;
 	display: flex;
 	justify-content: space-between;
-	background-color: #293449;
-	color:white;
+	background-color: #293449;  
 }
 
 .main-header-left {
-	display: flex;
+  display: flex;
 }
 
 .main-logo {
+  position: relative;
 	width: 220px;
-	height: 42px;
+	height: 47px;
 	display: flex;
 	background-color: #ee3643;
   flex-direction: column;
@@ -79,8 +83,12 @@ li {
 .main-logo img{
 	margin:auto;
 }
+.main-logo::after {
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+}
 
-/* суровая полоска под лого
+/*
+ суровая полоска под лого
 .main-logo:after {
 	content: "";
 	position: relative;
@@ -148,6 +156,24 @@ li {
   opacity: 0.3;
 }
 
+.bookmarks:hover,
+.bookmarks:focus,
+.cart:hover,
+.cart:focus,
+.search:hover,
+.search:focus {
+  background-color: #212a3a;
+}
+
+.bookmarks:hover::before,
+.bookmarks:focus::before,
+.cart:hover::before,
+.cart:focus::before,
+.search:hover::before,
+.search:focus::before{
+  opacity: 1;
+}
+
 .cart:before {
   display: inline-block;
   vertical-align: bottom;
@@ -165,6 +191,11 @@ li {
   background-color: #63a63e;
 }
 
+.cart-button:hover,
+.cart-button:focus {
+  background-color: #5fbb2d;
+}
+
 .main-header-bottom {
 	display: flex;
 	flex-direction: column;
@@ -174,11 +205,14 @@ li {
 
 .main-header-middle {
 	display: flex;
-	justify-content: space-between;
-	margin-top:50px;
+  justify-content: space-between;
+  align-items: top;
+  margin-top:44px;
+  margin-bottom: 44px;
 }
 
 .site-title {
+  margin: 0;
 	width: 300px;
   padding-left: 50px;
   color: #ee3643;
@@ -189,7 +223,7 @@ li {
 }
 
 .header-contacs {
-	width: 270px;
+  margin: 0;
 	display: flex;
 	flex-direction: column;
   justify-content: space-between;
@@ -197,19 +231,20 @@ li {
 }
 
 .header-phone {
+  width: 270px;
+  height: 45px;
 	border:3px solid white;
 	width: 100%;
-	margin: auto;
+	margin: 0 auto;
   text-align: center;
   color: #ee3643;
   font-family: Cuprum;
   font-size: 21px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 45px;
 }
 
 .header-adress {
-  width: 250px;
   color: #32425c;
   font-family: Cuprum;
   font-size: 14px;
@@ -218,13 +253,14 @@ li {
 }
 
 .user-navigation {
-	width: 300px;
+  width: 300px;
 }
 
 .user-navigation-list {
+  margin: 0;
+  padding: 0;
 	display: flex;
   justify-content: space-between;
-  padding: 0;
 }
 
 .sing-in,
@@ -234,17 +270,35 @@ li {
   background-color: #ffffff;
   margin-left: 10px;
   position: relative;
+  color: #000000;
+  font-family: Cuprum;
+  font-size: 21px;
+  font-weight: 400;
 }
 
-.sing-in:before {
+.sing-in a:hover,
+.sing-in a:focus,
+.sing-up a:hover,
+.sing-up a:focus {
+  color: #ee3643;
+}
+
+.sing-in a::before {
   content: "";
-  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
   background-image: url(/img/icon-login.png);
   background-repeat: no-repeat;
-  background-position: 15px;
+  background-position: center;
   width: 50px;
-  height: 100%;
+  height: 45px;
   opacity: .3;
+}
+
+.sing-in a:hover::before,
+.sing-in a:focus::before {
+  opacity: 1;
 }
 
 .sing-in a{
@@ -252,7 +306,6 @@ li {
 	width: 121px;
   height: 45px;
   line-height: 45px;
-  padding-left: 48px;
 }
 
 .sing-up a{
@@ -270,15 +323,34 @@ li {
 }
 
 .site-navigation ul{
+  margin: 0;
+  padding: 0;
   display: flex;
+  height: 100%;
+  
+}
+
+.site-navigation li {
+  display: flex;
+  flex-grow: 1;
   justify-content: space-around;
+  align-items: center;
 }
 
 .site-navigation a{
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
   line-height: 60px;
   color:white;
 }
 
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  background: #293449;
+}
 
 /*
 color:#454f61
@@ -343,14 +415,23 @@ color:#454f61
   position: relative;
 }
 
-.promo-card a:after{
+.promo-card a::before{
   content: "";
   position: absolute;
   width: 135px;
   height: 38px;
-  left:0px;
+  left:0;
   background-color: #000000;
-  opacity: 0.1;
+  opacity: .1;
+}
+
+.promo-card a:hover::before {
+  opacity: .2;
+}
+
+.promo-card span{
+  color: #ffffff;
+  opacity: 1;
 }
 
 .promo-card-material {
@@ -424,6 +505,8 @@ color:#454f61
   margin-top: 25px;
   display: inline;
   vertical-align: top;
+  color: #ffffff;
+  font-family: Cuprum;
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
@@ -433,6 +516,8 @@ color:#454f61
 .slider-item-header p{
   margin:0;
   margin-top: 8px;
+  color: #ffffff;
+  font-family: Cuprum;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -448,6 +533,19 @@ color:#454f61
   text-align: center;
   background-color: #ee3643;
   color: #ffffff;
+  font-family: Cuprum;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.button-slider:hover,
+.button-slider:focus,
+.top-products-button:hover,
+.top-products-button:focus,
+.top-brands-button:hover,
+.top-brands-button:focus {
+  background-color: #ca2c37;
 }
 
 .slider-arrows {
@@ -542,7 +640,7 @@ color:#454f61
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-bottom:21px;
+  padding-bottom: 20px;
 }
 
 .product img {
@@ -559,11 +657,11 @@ color:#454f61
   font-weight: 700;
   line-height: 20px;
   text-align: center;
-  margin:0px;
+  margin:0 auto;
 }
 
 .product p{
-  margin:0;
+  margin:0 auto;
 }
 
 .price-old {
@@ -595,7 +693,8 @@ color:#454f61
 }
 
 .product-overlay {
-  visibility:hidden;
+  position: absolute;
+  display: none;
   width: 217px;
   height:170px;
   display: flex;
@@ -606,6 +705,7 @@ color:#454f61
 
 
 .button-buy {
+  display: none;
   width: 135px;
   height: 38px;
   box-shadow: inset 0 -3px 0 #367315;
@@ -620,6 +720,7 @@ color:#454f61
 }
 
 .button-add-bookmark {
+  display: none;
   width: 135px;
   height: 38px;
   border: 3px solid #63a63e;
@@ -786,9 +887,10 @@ line-height: 24px;
 }
 
 .services-detail p{
-font-family: "PT Sans";
-font-weight: 400;
-line-height: 24px;
+  width: 340px;
+  font-family: "PT Sans";
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .services-delivery {
@@ -836,6 +938,7 @@ line-height: 24px;
 }
 
 .about-company p{
+  width: 550px;
   font-size: 14px;
   font-family: "PT Sans";
   font-weight: 400;
@@ -885,6 +988,7 @@ line-height: 24px;
 }
 
 .contacts p {
+  font-size: 13px;
   font-family: "PT Sans";
   font-weight: 400;
   line-height: 24px;
