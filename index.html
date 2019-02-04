@@ -4,24 +4,25 @@
   <meta charset="UTF-8">
   <title>Техномарт:интернет-магазин</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
   <!--   HEADER START   -->
   <header class="main-header">
     <div class="main-header-top">        
-      <div class="wrapper">
+      <div class="wrapper wrapper-header">
         <div class="main-header-left">  
           <a class="main-logo">
             <img src="img/logo.png" width="110" height="20" alt="Логотип интернет-магазина Техномарт">
           </a>   
           <form class="search">                 
-            <input type="text" id="search-input" placeholder="Поиск:">
+            <input type="text" id="search-input" placeholder="ppp">
+            <p class="search-form">Поиск:</p>
           </form>
         </div>
         <div class="top-header-nav">
-          <a class="bookmarks" href="bookmarks.html" title="Закладки">Закладки:<span class="bookmarks-counter">0</span></a>
-          <a class="cart" href="cart.html" title="Корзина">Корзина:<span class="cart-counter">10</span></a>
+          <a class="bookmarks" href="bookmarks.html" title="Закладки">Закладки: <span class="bookmarks-counter">0</span></a>
+          <a class="cart" href="cart.html" title="Корзина">Корзина: <span class="cart-counter">10</span></a>
           <a class="button cart-button" href="order.html">Оформить заказ</a> 
         </div>
       </div>
@@ -65,21 +66,23 @@
   <main class="main-content">
       <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <div class="content-style">
-        <div class="wrapper">
+        <div class="wrapper wrapper-main">
           <section class="promo">             
             <h2 class="visually-hidden">Предоставляемые услуги</h2>
             <div class="promo-cards">
-              <div class="promo-card promo-card-material">
-                <h3 class="promo-card-title">Материалы</h3>  
-                <a class="promo-button promo-button-material" href="material.html" title="Материалы">На любой вкус</a>
-              </div>
-              <div class="promo-card promo-card-tools">
-                <h3 class="promo-card-title">Инструмент</h3>
-                <a class="promo-button promo-button-tools" href="tools.html" title="Инструмент">На все случаи</a>
-              </div>
-              <div class="promo-card promo-card-technik">
-                <h3 class="promo-card-title">Техника</h3>
-                <a class="promo-button promo-button-technik" href="technik.html" title="Техника">Для стройки</a>
+              <div class="promo-cards-top">
+                <div class="promo-card promo-card-material">
+                  <h3 class="promo-card-title">Материалы</h3>  
+                  <a class="promo-button promo-button-material" href="material.html" title="Материалы">На любой вкус</a>
+                </div>
+                <div class="promo-card promo-card-tools">
+                  <h3 class="promo-card-title">Инструмент</h3>
+                  <a class="promo-button promo-button-tools" href="tools.html" title="Инструмент">На все случаи</a>
+                </div>
+                <div class="promo-card promo-card-technik">
+                  <h3 class="promo-card-title">Техника</h3>
+                  <a class="promo-button promo-button-technik" href="technik.html" title="Техника">Для стройки</a>
+                </div>
               </div>
               <div class="slider">
                 <ul class="slider-list">
@@ -111,13 +114,15 @@
                   </ul>
                 </div>
               </div>
-              <div class="promo-card promo-card-sale">
-                <h3 class="promo-card-title">Скидки 50%</h3>
-                <a class="promo-button promo-button-sale" href="sale.html" title="Скидки 50%">На 350 товаров</a>
-              </div>
-              <div class="promo-card promo-card-delivery">
-                <h3 class="promo-card-title">Доставка</h3>
-                <a class="promo-button promo-button-delivery" href="delivery.html" title="Доставка">Бесплатно</a>
+              <div class="promo-cards-right">
+                <div class="promo-card promo-card-sale">
+                  <h3 class="promo-card-title">Скидки 50%</h3>
+                  <a class="promo-button promo-button-sale" href="sale.html" title="Скидки 50%">На 350 товаров</a>
+                </div>
+                <div class="promo-card promo-card-delivery">
+                  <h3 class="promo-card-title">Доставка</h3>
+                  <a class="promo-button promo-button-delivery" href="delivery.html" title="Доставка">Бесплатно</a>
+                </div>
               </div>
             </div>
           </section>
@@ -136,7 +141,7 @@
                   <p class="price-new">25500 Р.</p>
                   <div class="product-overlay">
                     <a class="button button-buy" href="#">Купить</a>
-                    <a class="button button-add-bookmark" href="#">Добавить товар в закладки</a>
+                    <a class="button button-add-bookmark" href="#" title="Добавить товар в закладки">В закладки</a>
                   </div>
                 </article>
               </li>
@@ -148,7 +153,7 @@
                   <p class="price-new">15500 Р.</p>
                   <div class="product-overlay">
                     <a class="button button-buy" href="#">Купить</a>
-                    <a class="button button-add-bookmark" href="#">Добавить товар в закладки</a>
+                    <a class="button button-add-bookmark" href="#" title="Добавить товар в закладки">В закладки</a>
                   </div>
                 </article>
               </li>
@@ -160,7 +165,7 @@
                   <p class="price-new">25500 Р.</p>
                   <div class="product-overlay">
                     <a class="button button-buy" href="#">Купить</a>
-                    <a class="button button-add-bookmark" href="#">Добавить товар в закладки</a>
+                    <a class="button button-add-bookmark" href="#" title="Добавить товар в закладки">В закладки</a>
                   </div>
                 </article>
               </li>
@@ -172,7 +177,7 @@
                   <p class="price-new">12500 Р.</p>
                   <div class="product-overlay">
                     <a class="button button-buy" href="#">Купить</a>
-                    <a class="button button-add-bookmark" href="#">Добавить товар в закладки</a>
+                    <a class="button button-add-bookmark" href="#" title="Добавить товар в закладки">В закладки</a>
                   </div>
                 </article>
               </li>
