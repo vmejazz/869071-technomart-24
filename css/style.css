@@ -234,14 +234,29 @@ li {
   width: 270px;
   height: 45px;
 	border:3px solid white;
-	width: 100%;
-	margin: 0 auto;
+  width: 100%;
+  padding-left: 30px;
   text-align: center;
   color: #ee3643;
   font-family: Cuprum;
   font-size: 21px;
   font-weight: 400;
   line-height: 45px;
+  position: relative;
+}
+
+.header-phone::before {
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+  content: "";
+  width: 19px;
+  height: 19px;
+  left:15px;
+  top:10px;
+	background-image: url(/img/icon-phone.png);
+	background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .header-adress {
