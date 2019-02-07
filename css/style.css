@@ -50,6 +50,7 @@ html {
 li {
   list-style-type: none;
 }
+
 /* HEADER START */
 
 .main-header {
@@ -159,6 +160,7 @@ li {
 .search:hover,
 .search:focus {
   background-color: #212a3a;
+  outline: none;
 }
 
 .bookmarks:hover::before,
@@ -168,6 +170,7 @@ li {
 .search:hover::before,
 .search:focus::before {
   opacity: 1;
+  outline: none;
 }
 
 .cart:before {
@@ -191,6 +194,7 @@ li {
 .cart-button:hover,
 .cart-button:focus {
   background-color: #5fbb2d;
+  outline: none;
 }
 
 .main-header-bottom {
@@ -296,6 +300,7 @@ li {
 .sing-up a:hover,
 .sing-up a:focus {
   color: #ee3643;
+  outline: none;
 }
 
 .sing-in a::before {
@@ -316,6 +321,7 @@ li {
 .sing-in a:hover::before,
 .sing-in a:focus::before {
   opacity: 1;
+  outline: none;
 }
 
 .sing-in a {
@@ -442,6 +448,7 @@ li {
 .site-navigation a:hover,
 .site-navigation a:focus {
   background: #293449;
+  outline: none;
 }
 
 /*-----MAIN-----*/
@@ -519,6 +526,7 @@ li {
 .promo-card a:hover::before,
 .promo-card a:focus::before {
   opacity: 0.2;
+  outline: none;
 }
 
 .promo-card span {
@@ -569,6 +577,7 @@ li {
 .promo-cards-right {
   display: flex;
   flex-direction: column;
+  order: 1;
 }
 
 /*-----PROMO CARDS END-----*/
@@ -648,6 +657,7 @@ li {
 .button-write-us:hover,
 .button-write-us:focus {
   background-color: #ca2c37;
+  outline: none;
 }
 
 .slider-arrows {
@@ -776,7 +786,7 @@ li {
 .product:hover,
 .product:focus {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
-
+  outline: none;
 }
 
 .product img {
@@ -928,7 +938,7 @@ li {
   justify-content: space-between;
 }
 
-.top-brands-list li {
+.top-brands-list li{
   width: 220px;
   height: 145px;
   border: 1px solid #eaeaea;
@@ -938,14 +948,21 @@ li {
   margin-bottom: 20px;
 }
 
+.top-brands-list a{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
 .top-brands-list img {
   vertical-align: middle;
 }
 
-.top-brands-list li:hover,
-.top-brands-list li:focus {
+.top-brands-list a:hover,
+.top-brands-list a:focus {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
   border:none;
+  outline: none;
 }
 
 /*-----TOP BRANDS END-----*/
@@ -1031,6 +1048,7 @@ li {
   color: #ffffff;
   box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
   background-color: #293449;
+  outline: none;
 }
 
 .services-navigation .services-navigation-active {
@@ -1282,6 +1300,7 @@ li {
 .main-footer-right a:hover,
 .main-footer-right a:focus {
   text-decoration: underline;
+  outline: none;
 } 
 
 .main-footer-bottom {
@@ -1329,6 +1348,7 @@ li {
 .social-list a:hover,
 .social-list a:focus {
   background-color: #ee3643;
+  outline: none;
 }
 
 .social-vk {
@@ -1385,6 +1405,7 @@ li {
 .feedback a:hover,
 .feedback a:focus {
   text-decoration: underline;
+  outline: none;
 }
 
 /*-----FOOTER END-----*/
@@ -1742,8 +1763,9 @@ input[type="checkbox"]:checked ~ label:before {
 }
 
 .catalog-pagination li:hover,
-.catalog-pagination li:focus {
+.catalog-pagination a:focus {
   border: 1px solid #bdc6ca;
+  outline: none;
 }
 
 
