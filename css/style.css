@@ -278,7 +278,6 @@ a {
   opacity: 0.5;
 }
 
-
 .cart-button:hover,
 .cart-button:focus {
   background-color: #5fbb2d;
@@ -513,7 +512,7 @@ a {
   opacity: 1;
 }
 
-.user-authorised-name:active, 
+.user-authorised-name:active,
 .user-logout:active {
   opacity: 0.3;
 }
@@ -2058,7 +2057,6 @@ input[type="radio"]:checked + label:before {
   color: #000000;
   opacity: 1;
 }
-
 
 .sorting-value {
   list-style-type: none;
