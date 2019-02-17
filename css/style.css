@@ -2202,5 +2202,99 @@ input[type="radio"]:checked + label:before {
 
 /*-----MODAL-----*/
 .modal-cart-add {
+  display: block;
   display: none;
+  position: absolute;
+  width: 620px;
+  top: 300px;
+  left: 50%;
+
+  transform: translateX(-310px);
+
+  border-top: 7px solid #ee3643;
+  box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
+}
+
+.modal-cart-top {
+  min-height: 170px;
+  margin: 0;
+  padding: 0;
+  padding-top: 75px;
+  padding-bottom: 70px;
+  font-size: 30px;
+  font-weight: 400;
+
+  line-height: 30px;
+
+  background-color: #ffffff;
+}
+
+.modal-cart-top::before {
+  content: "";
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  top: 51px;
+  left: 81px;;
+  background-image: url(../img/form-1.svg);
+}
+
+.modal-cart-top b {
+  padding-left: 179px;
+}
+
+.modal-cart-bottom {
+  display: flex;
+  margin: 0;
+  padding-top: 37px;
+  padding-bottom: 37px;
+  padding-left: 80px;
+  flex-wrap: wrap;
+
+  background-color: #f1f1f1;
+}
+
+.button-send-order {
+  margin: 0;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 14px;
+  padding-left: 59px;
+  padding-right: 62px;
+  border: none;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.button-continue {
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 14px;
+  padding-left: 44px;
+  padding-right: 48px;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.button-close {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  border: none;
+
+  font-size: 0;
+
+  background-image: url(../img/form-close.svg);
+  background-color: #ffffff;
 }
