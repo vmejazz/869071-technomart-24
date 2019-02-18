@@ -97,7 +97,7 @@
             </div>
             <div class="slider">
               <ul class="slider-list">
-                <li class="slider-item slider-item--active">
+                <li class="slider-item slider-item--active slider-drill">
                   <img src="img/drill.jpg" width="620" height="266" alt="Дрели">
                   <div class="slider-item-header">
                     <h3>Дрели</h3>
@@ -105,7 +105,7 @@
                   </div>
                   <a href="dreli.html" class="button button-slider">Открыть каталог</a>
                 </li>
-                <li class="slider-item">
+                <li class="slider-item slider-perforator">
                   <img src="img/perforator.jpg" width="620" height="266" alt="Перфораторы">
                   <div class="slider-item-header">
                     <h3>Перфораторы</h3>
@@ -272,7 +272,7 @@
                 Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.
               </p>
-              <button type="button" class="send-credit" aria-label="Отправить заявку на кредит">Отправить заявку</button>
+              <button type="button" class="button send-credit" aria-label="Отправить заявку на кредит">Отправить заявку</button>
             </section>
           </div>
         </div>
@@ -306,8 +306,38 @@
           <a class="contacts-map" href="maps.google.ru" title="Большая Конюшенная ул., 19">
             <img src="img/map.png" width="300" height="158" alt="Адрес интернет-магазина Техномарт: Большая Конюшенная ул., 19">
           </a>
+          <div class="contacts-map-full">
+            <button type="button" class="button-close">Закрыть</button>
+          </div>
           <a class="button button-write-us" href="write-us.html">Заблудились? Напишите нам!</a>
         </section>
+          <!-- POP-UP WINDOW START-->
+        <section class="modal-write-us">
+          <h2 class="visually-hidden">Обратная связь</h2>
+          <div class="modal-write-us-top">
+            <form id="form-write-us" action="https://echo.htmlacademy.ru" method="post">
+              <ul class="write-us-list">
+                <li class="write-us-name">
+                  <label for="you-name">Ваше имя:</label>
+                  <textarea type="text" id="you-name" placeholder="Имя Фамилия"></textarea>
+                </li>
+                <li class="write-us-email"> 
+                  <label for="you-email">Ваш e-mail:</label>
+                  <textarea type="text" id="you-email" placeholder="email@example.com"></textarea>
+                </li>
+                <li class="write-us-text">
+                  <label for="you-text">Текст письма:</label>
+                  <textarea type="text" id="you-text" placeholder="В свободной форме"></textarea>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div class="modal-write-us-bottom">
+            <button type="submit" class="button write-us-button" form="form-write-us">Отправить</button>
+          </div>
+          <button type="button" class="button-close">Закрыть</button>
+        </section>
+          <!-- POP-UP WINDOW END-->
       </div>
     </section>
   </main>
@@ -373,35 +403,19 @@
   </footer>
   <!--   FOOTER END   -->
   
-  <!-- POP-UP WINDOW START-->
-  <section class="modal-write-us">
-    <h2 class="visually-hidden">Обратная связь</h2>
-    <div class="modal-write-us-top">
-      <form id="form-write-us" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-top">
-          <label for="you-name">
-            <input type="text" id="you-name" placeholder="Имя Фамилия">
-            Ваше имя и фамилия
-          </label>
-          <label for="you-email">
-            <input type="text" id="you-email" placeholder="email@example.com">
-            Ваша электронная почта
-          </label>
-        </div>
-        <div class="form-bottom">
-          <label for="you-text">
-            <input type="text" id="you-text" placeholder="Добавить товар в свободной форме">
-            Дополнительная информация к заявке в свободной форме
-          </label>
-        </div>
-      </form>
+  <section class="modal-cart-add">
+    <h2 class="visually-hidden">Товар добавлен. Дальнейшие действия</h2>
+    <div class="modal-cart-top">
+      <b>Товар добавлен в корзину!</b>
     </div>
-    <div class="modal-write-us-bottom">
-      <button type="submit" class="write-us-button" form="form-write-us">Отправить</button>
+    <div class="modal-cart-bottom">
+      <button type="button" class="button button-send-order">Оформить заказ</button>
+      <button type="button" class="button button-continue">Продолжить покупки</button>
     </div>
     <button type="button" class="button-close">Закрыть</button>
   </section>
-  <!-- POP-UP WINDOW END-->
+
+  <script src="./js/script.js"></script>
 
 </body>
 </html>
