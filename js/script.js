@@ -1,5 +1,7 @@
+// BUY BUTTON
+
 var popupCart = document.querySelector('.modal-cart-add');
-var openPopupButton = document.querySelectorAll('.product-button-bookmark');
+var openPopupButton = document.querySelectorAll('.product-button-buy');
 var closePopupButton = popupCart.querySelector('.button-close');
 
 for (var i = 0; i < openPopupButton.length; i++) {
