@@ -898,8 +898,13 @@ a {
   border-radius: 50%;
 }
 
-.slider-dots-button:hover,
+.slider-item--active .slider-dots-button,
 .slider-dots-button:focus {
+  background-color: red;
+  outline: none;
+}
+
+.dots-red {
   background-color: red;
 }
 

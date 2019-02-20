@@ -71,6 +71,15 @@ var sliderCliker = function (slider, link, detail) {
         link.classList.add('services-navigation-active');
         detail.classList.add('service--active');
     });
+    slider.addEventListener('focus', function (evt) {
+        evt.preventDefault();
+        for (i = 0; i <  openSliderServices.length; i++) {
+            sliderServices[i].classList.remove('services-navigation-active');
+            servicesDetail[i].classList.remove('service--active');
+        };
+        link.classList.add('services-navigation-active');
+        detail.classList.add('service--active');
+    });
 }
 
 for (i = 0; i < openSliderServices.length; i++) {
@@ -81,10 +90,25 @@ for (i = 0; i < openSliderServices.length; i++) {
 
 var sliderDrill = document.querySelector('.slider-drill');
 var sliderDotsDrill = document.querySelector(".slider-dots-drill");
+var sliderDrillHover = document.querySelectorAll('.slider-dots li:hover');
+
 
 sliderDotsDrill.addEventListener('click', function () {
     sliderDrill.classList.add('slider-item--active');
     sliderPerforator.classList.remove('slider-item--active');
+})
+
+sliderDotsDrill.addEventListener('mouseover', function (e) {
+    sliderDrill.classList.add('slider-item--active');
+    sliderPerforator.classList.remove('slider-item--active');
+    sliderDotsDrill.classList.add('dots-red');
+    sliderDotsPerforator.classList.remove('dots-red');
+})
+
+sliderDotsDrill.addEventListener('focus', function (e) {
+    sliderDrill.classList.add('slider-item--active');
+    sliderPerforator.classList.remove('slider-item--active');
+    sliderDotsPerforator.classList.remove('dots-red');
 })
 
 var sliderPerforator = document.querySelector('.slider-perforator');
@@ -94,4 +118,42 @@ sliderDotsPerforator.addEventListener('click', function () {
     sliderPerforator.classList.add('slider-item--active');
     sliderDrill.classList.remove('slider-item--active');
 })
+
+sliderDotsPerforator.addEventListener('mouseover', function (e) {
+    sliderPerforator.classList.add('slider-item--active');
+    sliderDrill.classList.remove('slider-item--active');
+    sliderDotsPerforator.classList.add('dots-red');
+    sliderDotsDrill.classList.remove('dots-red');
+})
+
+sliderDotsPerforator.addEventListener('focus', function (e) {
+    sliderPerforator.classList.add('slider-item--active');
+    sliderDrill.classList.remove('slider-item--active');
+    sliderDotsDrill.classList.remove('dots-red');
+})
+
+var arrowButton = document.querySelectorAll('.button-slider-arrows');
+var sliderActive = document.querySelector('.slider-item--active');
+var sliderNotActive = document.querySelector('.slider-item:not(.slider-item--active');
+
+for (i = 0; i < arrowButton.length; i++) {
+
+} ;
+
+var arrowCliker = function (arrow) {
+    arrow.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        console.log(arrow);
+        console.log(sliderActive);
+        sliderActive.classList.remove('slider-item--active');
+        var oldStage = sliderActive;
+        sliderNotActive.classList.add('slider-item--active');
+        sliderActive = sliderNotActive;
+        sliderNotActive = oldStage;        
+    });
+} ;
+
+for (i = 0; i < arrowButton.length; i++) {
+    arrowCliker(arrowButton[i]);
+}
 
