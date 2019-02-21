@@ -65,31 +65,21 @@ a {
 
 /* HEADER START */
 
-.main-header {
-  display: flex;
-  flex-direction: column;
-}
-
 .main-header-top {
-  display: flex;
-  justify-content: space-between;
-  height: 42px;
-
   background-color: #293449;
+  margin-bottom: -5px;
 }
 
 .wrapper-header {
   display: flex;
-
   color: #ffffff;
 
   font-size: 17px;
   line-height: 18px;
 }
-
 .main-header-left {
   display: flex;
-  width: 470px;
+  width: 490px;
 }
 
 .main-logo {
@@ -99,6 +89,7 @@ a {
   padding-bottom: 16px;
   padding-left: 55px;
   padding-right: 55px;
+  flex-shrink: 0;
 
   font-size: 0;
 
@@ -120,14 +111,14 @@ a {
 
 .search {
   position: relative;
+  height: 42px;
 }
 
 .search-field {
-  width: 250px;
-  height: 42px;
-  padding-left: 49px;
-
-  line-height: 42px;
+  height: 100%;
+  width: 270px;
+  padding-left: 50px;
+  padding-bottom: 3px;
 
   background-color: inherit;
   border: none;
@@ -192,8 +183,8 @@ a {
 
 .top-header-nav {
   display: flex;
-  justify-content: flex-end;
-  width: 470px;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 .top-header-nav-count {
@@ -201,18 +192,19 @@ a {
 }
 
 .top-header-nav a {
-  position: relative;
   height: 42px;
+  position: relative;
   padding-top: 12px;
-  padding-bottom: 13px;
+  padding-bottom: 12px;
 
   font-size: 17px;
   line-height: 18px;
 }
 
 .bookmarks {
-  padding-left: 44px;
+  padding-left: 45px;
   padding-right: 28px;
+  flex-grow: 1;
 }
 
 .bookmarks::before {
@@ -234,6 +226,7 @@ a {
 .cart {
   padding-left: 50px;
   padding-right: 30px;
+  flex-grow: 1;
 }
 
 .cart::before {
@@ -254,10 +247,8 @@ a {
 
 .cart-button {
   height: 42px;
-  padding-top: 14px;
-  padding-bottom: 13px;
   padding-left: 20px;
-  padding-right: 22px;
+  padding-right: 20px;
 
   background-color: #63a63e;
 }
@@ -304,8 +295,6 @@ a {
 }
 
 .main-header-bottom {
-  display: flex;
-  flex-direction: column;
   padding-bottom: 60px;
 
   background-color: #f3f7f9;
@@ -313,7 +302,7 @@ a {
 
 .main-header-middle {
   display: flex;
-  margin-top: 46px;
+  padding-top: 49px;
   margin-bottom: 39px;
 }
 
@@ -322,7 +311,7 @@ a {
   margin: 0;
   margin-right: 20px;
   padding: 0;
-  padding-top: 3px;
+  
   padding-left: 53px;
 
   font-size: 16px;
@@ -342,10 +331,10 @@ a {
 .header-phone {
   position: relative;
   display: inline-block;
-  padding-top: 10px;
+  padding-top: 6px;
   padding-bottom: 8px;
-  padding-left: 71px;
-  padding-right: 49px;
+  padding-left: 72px;
+  padding-right: 50px;
 
   border: 3px solid white;
 
@@ -362,7 +351,7 @@ a {
   width: 19px;
   height: 19px;
   left: 13px;
-  top: 10px;
+  top: 8px;
 
   vertical-align: middle;
 
@@ -372,12 +361,11 @@ a {
 
 .header-adress {
   margin: 0;
-  padding-top: 4px;
+  padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px;
 
   font-size: 14px;
-  font-weight: 400;
   line-height: 24px;
   color: #32425c;
 }
@@ -419,7 +407,7 @@ a {
   display: inline-block;
   width: 20px;
   height: 17px;
-  top: 14px;
+  top: 12px;
   left: 14px;
 
   vertical-align: middle;
@@ -430,7 +418,7 @@ a {
 }
 
 .sing-in a {
-  padding-top: 12px;
+  padding-top: 10px;
   padding-bottom: 11px;
   padding-left: 48px;
   padding-right: 24px;
@@ -440,7 +428,7 @@ a {
 }
 
 .sing-up a {
-  padding-top: 12px;
+  padding-top: 10px;
   padding-bottom: 11px;
   padding-left: 25px;
   padding-right: 24px;
@@ -925,7 +913,7 @@ a {
   justify-content: space-between;
   width: 940px;
   margin: 0;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   padding: 0;
   padding-left: 28px;
   padding-right: 24px;
@@ -971,7 +959,8 @@ a {
   width: 220px;
   margin-left: 20px;
   margin-bottom: 20px;
-  padding-bottom: 21px;
+  padding-left: 5px;
+  padding-bottom: 20px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
