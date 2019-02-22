@@ -71,7 +71,7 @@ var sliderCliker = function (slider, link, detail) {
         link.classList.add('services-navigation-active');
         detail.classList.add('service--active');
     });
-    slider.addEventListener('focus', function (evt) {
+    slider.addEventListener('focusgit', function (evt) {
         evt.preventDefault();
         for (i = 0; i <  openSliderServices.length; i++) {
             sliderServices[i].classList.remove('services-navigation-active');
