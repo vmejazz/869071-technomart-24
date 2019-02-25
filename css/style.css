@@ -1635,10 +1635,6 @@ a {
   border: none;
 }
 
-.contacts-map-full button {
-  background-color: #eeeae3;
-}
-
 .button-write-us {
   padding-top: 13px;
   padding-bottom: 12px;
@@ -1847,7 +1843,7 @@ a {
   padding: 0;
   margin-left: 52px;
   
-  vertical-align: top
+  vertical-align: top;
   color: #ffffff;
   font-size: 16px;
   line-height: 18px;

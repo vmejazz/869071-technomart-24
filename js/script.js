@@ -139,7 +139,7 @@ var servicesClear = function () {
 
 //          PROMO-SLIDER
 
-if (window.location.toString().includes('index')) {
+if (document.querySelector('.slider')) {
   var sliderDrill = document.querySelector('.slider-drill');
   var sliderDotsDrill = document.querySelector('.slider-dots-drill');
   var sliderPerforator = document.querySelector('.slider-perforator');
