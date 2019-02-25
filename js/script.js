@@ -7,11 +7,30 @@ var popupMapClose = document.querySelector('.contacts-map-full .button-close');
 var popupWrireUs = document.querySelector('.modal-write-us');
 var linkPopupWriteUs = document.querySelector('.button-write-us');
 var popupWriteUsClose = document.querySelector('.modal-write-us .button-close');
+var formWriteUs = document.getElementById('form-write-us');
+var formName = document.getElementById('you-name');
+var formEmail = document.getElementById('you-email');
+var formText = document.getElementById('you-text');
+
+var isStorageSupport = true;
+var storage = "";
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
+
 
 for (var i = 0; i < linkAddProduct.length; i++) {
   linkAddProduct[i].addEventListener('click', function(evt) {
     evt.preventDefault();
     popupCart.classList.add('modal-cart--show');
+    formName.focus();
+
+    if (storage) {
+      formName.value = storage;
+    }
   });
 };
   
@@ -50,23 +69,41 @@ if (popupMap) {
 
 if (popupWrireUs) {
   linkPopupWriteUs.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  popupWrireUs.classList.add('modal-write-us--show');
+    evt.preventDefault();
+    popupWrireUs.classList.add('modal-write-us--show');
   })
 
   popupWriteUsClose.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  popupWrireUs.classList.remove('modal-write-us--show');
+    evt.preventDefault();
+    popupWrireUs.classList.remove('modal-write-us--show');
+    popupWrireUs.classList.remove("modal-error");
   });
 
   window.addEventListener('keydown', function(evt) {
     if (evt.keyCode === 27) {
       if (popupWrireUs.classList.remove('modal-write-us--show')) {
         popupWrireUs.classList.remove('modal-write-us--show');
+        popupWrireUs.classList.remove("modal-error");
       };
     };
   });
 };
+
+formWriteUs.addEventListener('submit', function(evt) {
+  if (!formName.value || !formEmail.value || !formText.value) {
+    evt.preventDefault();
+    popupWrireUs.classList.remove("modal-error");
+    popupWrireUs.offsetWidth = popupWrireUs.offsetWidth;
+    popupWrireUs.classList.add("modal-error");
+    // setTimeout(popupWrireUs.classList.remove("modal-error"), 5000);
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("login", formName.value);
+      localStorage.setItem("email", formEmail.value);
+      localStorage.setItem("text", formText.value);
+    };
+  }
+});
 
 //         SERVICES SLIDER
 
