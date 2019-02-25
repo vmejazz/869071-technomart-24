@@ -12,7 +12,7 @@ body {
   min-width: 960px;
   margin: 0 auto;
 
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "Cuprum", "Tahoma", sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -967,7 +967,7 @@ a {
   margin-bottom: 20px;
   padding-bottom: 20px;
 
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
@@ -1264,7 +1264,7 @@ a {
   margin: 0;
   margin-bottom: 23px;
   padding: 0;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 14px;
   line-height: 24px;
 }
@@ -1361,7 +1361,7 @@ a {
 
 .services-detail p {
   width: 300px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   line-height: 24px;
 }
 
@@ -1423,7 +1423,7 @@ a {
   padding-top: 24px;
   width: 550px;
   font-size: 14px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-weight: 400;
   line-height: 24px;
 }
@@ -1484,7 +1484,7 @@ a {
   margin-bottom: 31px;
   padding: 0;
   font-size: 13px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-weight: 400;
   line-height: 24px;
   width: 180px;
@@ -1523,6 +1523,14 @@ a {
 
 .map-full--show {
   display: block;
+}
+
+.map-full-yandex {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;;
 }
 
 .contacts-map-full button {
@@ -1777,7 +1785,7 @@ a {
   margin: 0;
   margin-right: 42px;
 
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1855,7 +1863,7 @@ a {
   padding-top: 11px;
   padding-bottom: 10px;
 
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1877,7 +1885,7 @@ a {
 }
 
 .filter legend {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
@@ -1947,7 +1955,7 @@ a {
 
   text-align: center;
 
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1989,7 +1997,7 @@ a {
   margin-bottom: 20px;
   position: relative;
 
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
@@ -2009,12 +2017,13 @@ a {
 }
 
 .filter-brands label::before {
-  background-image: url(../img/checkbox-off.svg);
+  background-image: url(../img/checkbox-off.png);
 }
 
 .filter-brands label:hover::before,
-.filter-brands label:focus::before {
-  background-image: url(../img/checkbox-off-hover.svg);
+.brands-checkbox:focus + label::before {
+  background-image: url(../img/checkbox-off-hover.png);
+  outline: none;
 }
 
 .filter-brands label:active::before {
@@ -2032,26 +2041,45 @@ a {
 }
 
 .filter-power label::before {
-  background-image: url(../img/radio-off.svg);
+  background-image: url(../img/radio-off.png);
 }
 
 .filter-power label:hover::before,
-.filter-power label:focus::before {
-  background-image: url(../img/radio-off-hover.svg);
+.power-radio-btn:focus + label::before {
+  background-image: url(../img/radio-off-hover.png);
+  outline: none;
 }
 
 .filter-power label:active::before {
+  opacity: 0.5;
+}
+
+.brands-checkbox:checked + label:before {
+  width: 26px;
+  background-image: url(../img/checkbox-on.png);
+}
+
+.brands-checkbox:checked:hover + label:before,
+.brands-checkbox:checked:focus + label:before {
+  width: 26px;
+  background-image: url(../img/checkbox-on-hover.png);
+}
+
+.brands-checkbox:disabled + label,
+.brands-checkbox:disabled + label::before,
+.power-radio-btn:disabled + label,
+.power-radio-btn:disabled + label::before {
   opacity: 0.3;
 }
 
-input[type="checkbox"]:checked + label:before {
-  width: 26px;
-  background-image: url(../img/checkbox-on.svg);
+.power-radio-btn:checked + label:before {
+  background-image: url(../img/radio-on.png);
 }
 
-input[type="radio"]:checked + label:before {
-  background-image: url(../img/radio-on.svg);
+.power-radio-btn:checked:hover + label:before {
+  background-image: url(../img/radio-on-hover.png);
 }
+
 
 .button-filter {
   margin: 0;
@@ -2061,7 +2089,7 @@ input[type="radio"]:checked + label:before {
   padding-bottom: 8px;
   border: 1px solid #e5e5e5;
 
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2088,7 +2116,7 @@ input[type="radio"]:checked + label:before {
   padding-left: 19px;
   padding-right: 10px;
 
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2219,7 +2247,7 @@ input[type="radio"]:checked + label:before {
   width: 100%;
   height: 100%;
 
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -2269,7 +2297,7 @@ input[type="radio"]:checked + label:before {
   margin-top: 24px;
   padding: 0;
   font-size: 13px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   line-height: 24px;
 }
 
@@ -2363,17 +2391,39 @@ input[type="radio"]:checked + label:before {
 
 .button-close {
   position: absolute;
-  width: 21px;
-  height: 21px;
   top: 9px;
   right: 9px;
-  padding: 10px;
-  border: none;
+
+  width: 21px;
+  height: 21px;
 
   font-size: 0;
 
-  background-image: url(../img/form-close.svg);
-  background-color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-close::before,
+.button-close::after {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: -2px;
+
+  width: 25px;
+  height: 4px;
+
+  background-color: #ee3643;
+}
+
+.button-close::before {
+  transform: rotate(45deg);
+}
+
+.button-close::after {
+  transform: rotate(-45deg);
 }
 
 .modal-write-us {
