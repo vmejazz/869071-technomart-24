@@ -68,6 +68,8 @@ if (popupWrireUs) {
   });
 };
 
+//         SERVICES SLIDER
+
 var servicesSlider = document.querySelectorAll('.services-navigation li');
 var linkServices = document.querySelectorAll('.services-navigation a');
 var servicesDetail = document.querySelectorAll('.services-detail');
@@ -98,64 +100,64 @@ var servicesClear = function () {
   };
 };
 
-
 //          PROMO-SLIDER
 
-var sliderDrill = document.querySelector('.slider-drill');
-var sliderDotsDrill = document.querySelector('.slider-dots-drill');
-var sliderPerforator = document.querySelector('.slider-perforator');
-var sliderDotsPerforator = document.querySelector('.slider-dots-perforator');
-var arrowButton = document.querySelectorAll('.button-slider-arrows');
-var sliderActive = document.querySelector('.slider-item--active');
-var sliderNotActive = document.querySelector('.slider-item:not(.slider-item--active)');
-console.log(sliderNotActive);
+if (window.location.toString().includes('index')) {
+  var sliderDrill = document.querySelector('.slider-drill');
+  var sliderDotsDrill = document.querySelector('.slider-dots-drill');
+  var sliderPerforator = document.querySelector('.slider-perforator');
+  var sliderDotsPerforator = document.querySelector('.slider-dots-perforator');
+  var arrowButton = document.querySelectorAll('.button-slider-arrows');
+  var sliderActive = document.querySelector('.slider-item--active');
+  var sliderNotActive = document.querySelector('.slider-item:not(.slider-item--active)');
 
-sliderDotsDrill.addEventListener('click', function() {
-  sliderDrill.classList.add('slider-item--active');
-  sliderPerforator.classList.remove('slider-item--active');
-});
+  sliderDotsDrill.addEventListener('click', function() {
+    sliderDrill.classList.add('slider-item--active');
+    sliderPerforator.classList.remove('slider-item--active');
+  });
 
-sliderDotsDrill.addEventListener('mouseover', function() {
-  sliderDrill.classList.add('slider-item--active');
-  sliderPerforator.classList.remove('slider-item--active');
-  sliderDotsDrill.classList.add('dots-red');
-  sliderDotsPerforator.classList.remove('dots-red');
-});
+  sliderDotsDrill.addEventListener('mouseover', function() {
+    sliderDrill.classList.add('slider-item--active');
+    sliderPerforator.classList.remove('slider-item--active');
+    sliderDotsDrill.classList.add('dots-red');
+    sliderDotsPerforator.classList.remove('dots-red');
+  });
 
-sliderDotsDrill.addEventListener('focus', function() {
-  sliderDrill.classList.add('slider-item--active');
-  sliderPerforator.classList.remove('slider-item--active');
-  sliderDotsPerforator.classList.remove('dots-red');
-});
+  sliderDotsDrill.addEventListener('focus', function() {
+    sliderDrill.classList.add('slider-item--active');
+    sliderPerforator.classList.remove('slider-item--active');
+    sliderDotsPerforator.classList.remove('dots-red');
+  });
 
-sliderDotsPerforator.addEventListener('click', function() {
+  sliderDotsPerforator.addEventListener('click', function() {
+      sliderPerforator.classList.add('slider-item--active');
+      sliderDrill.classList.remove('slider-item--active');
+    });
+    
+  sliderDotsPerforator.addEventListener('mouseover', function(e) {
     sliderPerforator.classList.add('slider-item--active');
     sliderDrill.classList.remove('slider-item--active');
+    sliderDotsPerforator.classList.add('dots-red');
+    sliderDotsDrill.classList.remove('dots-red');
   });
-  
-sliderDotsPerforator.addEventListener('mouseover', function(e) {
-  sliderPerforator.classList.add('slider-item--active');
-  sliderDrill.classList.remove('slider-item--active');
-  sliderDotsPerforator.classList.add('dots-red');
-  sliderDotsDrill.classList.remove('dots-red');
-});
 
-sliderDotsPerforator.addEventListener('focus', function(e) {
-  sliderPerforator.classList.add('slider-item--active');
-  sliderDrill.classList.remove('slider-item--active');
-  sliderDotsDrill.classList.remove('dots-red');
-});
-
-for (i = 0; i < arrowButton.length; i++) {}
-
-var arrowCliker = function(arrow) {
-  arrow.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    sliderActive.classList.toggle('slider-item--active');
-    sliderNotActive.classList.toggle('slider-item--active');
+  sliderDotsPerforator.addEventListener('focus', function(e) {
+    sliderPerforator.classList.add('slider-item--active');
+    sliderDrill.classList.remove('slider-item--active');
+    sliderDotsDrill.classList.remove('dots-red');
   });
-};
 
-for (i = 0; i < arrowButton.length; i++) {
-  arrowCliker(arrowButton[i]);
+  for (i = 0; i < arrowButton.length; i++) {}
+
+  var arrowCliker = function(arrow) {
+    arrow.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      sliderActive.classList.toggle('slider-item--active');
+      sliderNotActive.classList.toggle('slider-item--active');
+    });
+  };
+
+  for (i = 0; i < arrowButton.length; i++) {
+    arrowCliker(arrowButton[i]);
+  };
 };

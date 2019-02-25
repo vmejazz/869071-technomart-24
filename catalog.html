@@ -17,8 +17,8 @@
             <img src="img/logo.svg" width="110" height="20" alt="Логотип интернет-магазина Техномарт">
           </a>   
           <form class="search">                 
-            <input class="search-field" type="text" id="search-input" placeholder="Поиск:">
-            <button class="button-search" type="submit"></button>
+            <input class="search-field" type="text" id="search-input" placeholder="Поиск:" aria-label="Поле поиска по сайту">
+            <button class="button-search" type="submit" aria-label="Кнопка поиска"></button>
           </form>
         </div>
         <div class="top-header-nav">
@@ -72,7 +72,7 @@
     <h1 class="visually-hidden">Каталог товаров</h1>
     <div class="wrapper wrapper-main">
       <div class="catalog-perforator">
-        <ul class="breadcrumbs">
+        <ul class="breadcrumbs" aria-label="Навигация по каталогу">
           <li><a class="breadcrumbs-index" href="index.html">Главная</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="tools.html">Инструмент</a></li>
@@ -90,11 +90,11 @@
               </div>
               <div class="range-input">
                 <div class="range-input-min">
-                  <label><input type="text" class="min-price" id="min-price-column" value="0" title="Минимальная цена"></label>
+                  <label><input type="text" class="min-price" id="min-price-column" value="0" aria-label="Минимальная цена"></label>
                 </div>
                 <span class="range-interval">-</span>
                 <div class="range-input-max">
-                  <label><input type="text" class="max-price" id="max-price-column" value="30000" title="Максимальная цена"></label>
+                  <label><input type="text" class="max-price" id="max-price-column" value="30000" aria-label="Максимальная цена"></label>
                 </div>
               </div>
             </fieldset>
