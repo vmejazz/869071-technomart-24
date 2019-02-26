@@ -189,6 +189,14 @@ a {
 .search-field:hover ~ .button-search,
 .search-field:focus ~ .button-search {
   background-image: url(../img/icon-search-red.png);
+  
+  opacity: 1;
+}
+
+.button-search:hover,
+.button-search:focus {
+  background-image: url(../img/icon-search-red.png);
+  
   opacity: 1;
 }
 
@@ -1021,7 +1029,7 @@ a {
   justify-content: space-between;
   width: 220px;
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   padding-bottom: 20px;
 
   font-family: "PT Sans", "Tahoma", sans-serif;
@@ -1071,7 +1079,7 @@ a {
   flex-grow: 1;
   margin: 0;
   margin-top: 9px;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
   padding-left: 22px;
   padding-right: 25px;
 }
@@ -1086,6 +1094,7 @@ a {
 
 .product .price-old {
   min-height: 20px;
+  margin-top: 12px;
   margin-bottom: 7px;
 
   color: #a9a9a9;
@@ -1096,11 +1105,10 @@ a {
   position: relative;
 
   min-width: 135px;
-  margin-left: 42px;
+  margin-left: 43px;
   margin-right: 60px;
-  padding-top: 11px;
-  padding-bottom: 7.8px;
-  padding-left: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   color: #ffffff;
 
@@ -1112,13 +1120,10 @@ a {
   content: "";
 
   position: absolute;
-  top: 0px;
+  top: 0;
   right: -25px;
 
-  width: 0;
-  height: 0;
-
-  border: 19px solid #ffffff;
+  border: 20px solid #ffffff;
   border-left-color: #ee3643;
 }
 
@@ -2050,7 +2055,7 @@ a {
 
   position: relative;
 
-  top: 10px;
+  top: 11px;
   left: 8px;
 
   border: 2px solid #ababab;
@@ -2643,6 +2648,8 @@ a {
   padding: 0;
   padding-top: 10px;
   padding-left: 15px;
+
+  overflow: hidden;
   
   border: 2px solid #dee3e4;
 }
@@ -2680,7 +2687,6 @@ a {
   
   border: none;
 }
-
 
       /* ANIMATION */
 
