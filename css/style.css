@@ -125,6 +125,8 @@ a {
   padding-left: 48px;
   padding-bottom: 3px;
 
+  line-height: 42px;
+
   background-color: inherit;
   border: none;
 }
@@ -170,6 +172,13 @@ a {
   opacity: 1;
 }
 
+.search-field::-webkit-input-placeholder {
+  color: #ffffff;
+
+  background-color: #293449;
+  opacity: 1;
+}
+
 .search-field:hover,
 .search-field:focus,
 .search-field:hover::placeholder,
@@ -181,6 +190,13 @@ a {
 
 .search-field:hover:-ms-input-placeholder,
 .search-field:focus:-ms-input-placeholder {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.search-field:hover::-webkit-input-placeholder,
+.search-field:focus::-webkit-input-placeholder {
   color: #000000;
 
   background-color: #ffffff;
