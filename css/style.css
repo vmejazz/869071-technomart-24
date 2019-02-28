@@ -726,7 +726,6 @@ a {
   width: 300px;
   min-height: 123px;
   margin-bottom: 20px;
-  padding-bottom: 22px;
 }
 
 .promo-card h3 {
@@ -748,7 +747,7 @@ a {
   width: 135px;
   min-height: 38px;
   margin-left: 24px;
-  margin-top: 13px;
+  margin-top: 12px;
 
   vertical-align: top;
   text-align: center;
@@ -852,7 +851,7 @@ a {
   position: absolute;
 
   left: 24px;
-  margin-top: 25px;
+  margin-top: 24px;
 }
 
 .slider-item-header h3 {
@@ -939,7 +938,7 @@ a {
 
   margin: 0;
   padding: 0;
-  top: 217px;
+  top: 220px;
   left: 294px;
 
   list-style-type: none;
