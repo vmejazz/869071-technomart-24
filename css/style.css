@@ -2646,6 +2646,10 @@ a {
   margin-bottom: 22px;
 }
 
+.write-us-list li:nth-child(3) {
+  width: 100%;
+}
+
 .write-us-list label {
   margin-bottom: 13px;
 
@@ -2653,13 +2657,13 @@ a {
   line-height: 18px;
 }
 
-.write-us-list textarea {
+.write-us-list input {
   height: 38px;
-  resize: none;
   margin: 0;
   padding: 0;
   padding-top: 10px;
-  padding-left: 15px;
+  padding-left: 16px;
+  padding-bottom: 8px;
 
   overflow: hidden;
 
@@ -2670,15 +2674,21 @@ a {
   width: 100%;
 }
 
-.write-us-text textarea {
+.write-us-text {
   display: block;
   width: 100%;
-  min-height: 114px;
-}
+  height: 114px;
+  resize: none;
 
-.write-us-list input {
+  margin: 0;
+  padding: 0;
   padding-top: 10px;
-  padding-left: 15px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+
+  overflow: hidden;
+
+  border: 2px solid #dee3e4;
 }
 
 .modal-write-us-bottom {

@@ -78,6 +78,7 @@ if (popupWrireUs) {
     formName.focus();
     if (storage) {
       formName.value = storage;
+      formEmail.focus();
     };
   })
 
@@ -87,6 +88,7 @@ if (popupWrireUs) {
     formName.focus();
     if (storage) {
       formName.value = storage;
+      formEmail.focus();
     };
   })
 
