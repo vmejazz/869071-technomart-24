@@ -114,7 +114,6 @@ formWriteUs.addEventListener("submit", function(evt) {
     popupWrireUs.classList.remove("modal-error");
     popupWrireUs.offsetWidth = popupWrireUs.offsetWidth;
     popupWrireUs.classList.add("modal-error");
-    // setTimeout(popupWrireUs.classList.remove("modal-error"), 5000);
   } else {
     if (isStorageSupport) {
       localStorage.setItem("login", formName.value);
