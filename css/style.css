@@ -125,8 +125,6 @@ a {
   padding-left: 48px;
   padding-bottom: 3px;
 
-  line-height: 42px;
-
   background-color: inherit;
   border: none;
 }
@@ -254,7 +252,7 @@ a {
   top: 12px;
   left: 17px;
 
-  vertical-align: middle;
+  vertical-align: top;
 
   background-image: url(../img/icon-bookmark.png);
   background-repeat: no-repeat;
@@ -276,7 +274,7 @@ a {
   top: 12px;
   left: 18px;
 
-  vertical-align: middle;
+  vertical-align: top;
 
   background-image: url(../img/cart-icon.png);
   background-repeat: no-repeat;
@@ -372,7 +370,7 @@ a {
   margin: 0;
   padding-top: 7px;
   padding-bottom: 8px;
-  padding-left: 72px;
+  padding-left: 71px;
   padding-right: 50px;
 
   color: #ee3643;
@@ -387,14 +385,14 @@ a {
   content: "";
 
   position: absolute;
+  top: 8px;
+  left: 13px;
 
   display: inline-block;
   width: 19px;
   height: 19px;
-  top: 8px;
-  left: 13px;
 
-  vertical-align: middle;
+  vertical-align: top;
 
   background-image: url(../img/icon-phone.png);
   background-repeat: no-repeat;
@@ -447,12 +445,12 @@ a {
   content: "";
 
   position: absolute;
+  top: 12px;
+  left: 14px;
 
   display: inline-block;
   width: 20px;
   height: 17px;
-  top: 12px;
-  left: 14px;
 
   vertical-align: middle;
 
@@ -461,16 +459,7 @@ a {
   opacity: 0.3;
 }
 
-.sing-in a {
-  display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 11px;
-  padding-left: 48px;
-  padding-right: 24px;
-
-  vertical-align: top;
-}
-
+.sing-in a,
 .sing-up a {
   display: inline-block;
   padding-top: 10px;
@@ -479,6 +468,10 @@ a {
   padding-right: 24px;
 
   vertical-align: top;
+}
+
+.sing-in a {
+  padding-left: 48px;
 }
 
 .sing-in a:hover,
@@ -506,6 +499,7 @@ a {
 
 .user-authorised {
   position: relative;
+
   max-width: 300px;
 
   color: #000000;
@@ -531,12 +525,12 @@ a {
   content: "";
 
   position: absolute;
+  top: 10px;
+  left: 13px;
 
   display: inline-block;
   width: 20px;
   height: 18px;
-  top: 10px;
-  left: 13px;
 
   font-size: 0;
   vertical-align: top;
@@ -548,12 +542,12 @@ a {
 
 .user-logout {
   position: absolute;
+  top: 10px;
+  right: 10px;
 
   display: inline-block;
   width: 20px;
   height: 17px;
-  top: 10px;
-  right: 10px;
 
   font-size: 0;
   vertical-align: middle;
@@ -593,11 +587,11 @@ a {
   content: "";
 
   position: absolute;
+  top: 10px;
+  left: 107px;
 
   width: 4px;
   height: 5px;
-  top: 10px;
-  left: 107px;
 
   background-image: url(../img/mini-dot.png);
   background-repeat: no-repeat;
@@ -652,7 +646,7 @@ a {
   padding-right: 30px;
 
   vertical-align: top;
-  
+
   color: #ffffff;
   font-size: 17px;
   font-weight: 400;
@@ -698,20 +692,18 @@ a {
 /*-----PROMO CARDS START-----*/
 
 .promo {
-  margin-bottom: 33px;
+  margin-bottom: 32px;
 }
 
 .promo-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .promo-cards-top {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
-  justify-content: space-between;
+  margin-left: -20px;
 }
 
 .promo-cards-right {
@@ -728,14 +720,15 @@ a {
   flex-direction: column;
   width: 300px;
   min-height: 123px;
+  margin-left: 20px;
   margin-bottom: 20px;
 }
 
 .promo-card h3 {
   max-width: 160px;
-  margin-bottom: 0;
-  margin-top: 22px;
-  margin-left: 23px;
+  margin: 0;
+  margin-top: 21px;
+  margin-left: 22px;
 
   color: #ffffff;
   font-size: 24px;
@@ -750,7 +743,7 @@ a {
   width: 135px;
   min-height: 38px;
   margin-left: 24px;
-  margin-top: 12px;
+  margin-top: 13px;
 
   vertical-align: top;
   text-align: center;
@@ -766,10 +759,10 @@ a {
   content: "";
 
   position: absolute;
+  left: 0;
 
   width: 135px;
   height: 100%;
-  left: 0;
 
   background-color: #000000;
   opacity: 0.1;
@@ -852,9 +845,9 @@ a {
 
 .slider-item-header {
   position: absolute;
-
   left: 24px;
-  margin-top: 24px;
+
+  margin-top: 23px;
 }
 
 .slider-item-header h3 {
@@ -872,7 +865,7 @@ a {
 
 .slider-item-header p {
   margin: 0;
-  margin-top: 1px;
+  margin-top: 2px;
 
   color: #ffffff;
   font-size: 18px;
@@ -882,10 +875,10 @@ a {
 
 .button-slider {
   position: absolute;
-
   top: 206px;
   left: 25px;
-  padding-top: 2px;
+
+  padding-top: 1px;
   padding-left: 50px;
   padding-right: 45px;
 
@@ -906,8 +899,8 @@ a {
 
 .slider-arrows {
   position: absolute;
-
   top: 114px;
+
   width: 100%;
   margin: 0;
   padding-left: 25px;
@@ -923,26 +916,25 @@ a {
   height: 40px;
 
   background: none;
+  background-repeat: no-repeat;
   border: none;
 }
 
 .slider-arrows-forward {
   background-image: url(../img/icon-right.png);
-  background-repeat: no-repeat;
 }
 
 .slider-arrows-back {
   background-image: url(../img/icon-left.png);
-  background-repeat: no-repeat;
 }
 
 .slider-dots {
   position: absolute;
+  top: 220px;
+  left: 293px;
 
   margin: 0;
   padding: 0;
-  top: 220px;
-  left: 294px;
 
   list-style-type: none;
 }
@@ -1060,12 +1052,12 @@ a {
   content: "";
 
   position: absolute;
+  top: 0;
+  right: 0;
   z-index: 2;
 
   width: 60px;
   height: 60px;
-  top: 0;
-  right: 0;
 
   background-image: url(../img/new-flag.png);
   background-repeat: no-repeat;
@@ -1095,7 +1087,6 @@ a {
   flex-grow: 1;
   margin: 0;
   margin-top: 9px;
-  /* margin-bottom: 12px; */
   padding-left: 22px;
   padding-right: 25px;
 }
@@ -1266,7 +1257,10 @@ a {
 }
 
 .top-brands-header h2 {
-  padding-left: 30px;
+  margin: 0;
+  padding: 0;
+  padding-top: 2px;
+  padding-left: 28px;
 
   color: #32425c;
   font-size: 30px;
@@ -1283,16 +1277,15 @@ a {
   color: #ffffff;
   text-align: center;
   line-height: 38px;
-  text-transform: uppercase;
 
   background-color: #ee3643;
 }
 
 .top-brands-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0;
+  margin-left: -20px;
   padding: 0;
 
   list-style-type: none;
@@ -1301,7 +1294,9 @@ a {
 .top-brands-list li {
   width: 220px;
   height: 145px;
+  margin: 0;
   margin-top: 20px;
+  margin-left: 20px;
 
   border: 1px solid #eaeaea;
 }
@@ -1346,7 +1341,8 @@ a {
 
 .services-header h2 {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
+  padding-top: 2px;
 
   font-size: 30px;
   font-weight: 400;
@@ -1367,7 +1363,7 @@ a {
 .services-slider {
   display: flex;
   justify-content: space-between;
-  margin-top: 47px;
+  margin-top: 48px;
 }
 
 .services-navigation {
@@ -1377,7 +1373,6 @@ a {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  padding-bottom: 102px;
 
   list-style-type: none;
 }
@@ -1400,8 +1395,7 @@ a {
   display: flex;
   width: 240px;
   height: 61px;
-
-  line-height: 61px;
+  padding: 0;
 
   color: #ffffff;
   font-size: 21px;
@@ -1414,6 +1408,7 @@ a {
 .services-navigation a {
   width: 100%;
   height: 100%;
+  padding-top: 18px;
   padding-left: 23px;
 
   text-align: left;
@@ -1422,6 +1417,7 @@ a {
 .services-navigation a:hover,
 .services-navigation a:focus {
   color: #ffffff;
+
   box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
   background-color: #293449;
 
@@ -1443,16 +1439,18 @@ a {
 
 .services-detail {
   display: none;
+  min-height: 285px;
   padding-bottom: 20px;
 
   background-repeat: no-repeat;
-  background-position: right 21px;
+  background-position: right 23px;
 }
 
 .services-detail h3 {
   margin: 0;
-  padding: 0;
+  margin-top: -2px;
   margin-bottom: 22px;
+  padding: 0;
 
   color: #32425c;
   font-size: 36px;
@@ -1469,20 +1467,14 @@ a {
 }
 
 .services-delivery {
-  min-height: 261px;
-
   background-image: url(../img/services-delivery.png);
 }
 
 .services-warranty {
-  min-height: 283px;
-
   background-image: url(../img/services-warranty.png);
 }
 
 .services-credit {
-  min-height: 285px;
-
   background-image: url(../img/services-credit.png);
 }
 
@@ -1498,8 +1490,8 @@ a {
 /*-----ABOUT COMPANY START-----*/
 
 .information-about-company {
-  margin-top: 78px;
-  margin-bottom: 86px;
+  margin-top: 80px;
+  margin-bottom: 85px;
 
   background-color: #ffffff;
 }
@@ -1543,6 +1535,7 @@ a {
 
 .delivery-list {
   margin: 0;
+  margin-left: 1px;
   margin-bottom: 37px;
   padding: 0;
   padding-top: 22px;
@@ -1695,7 +1688,7 @@ a {
 .main-footer-left p {
   width: 326px;
   margin: 0;
-  margin-top: 27px;
+  margin-top: 28px;
   padding: 0;
   padding-left: 3px;
 
@@ -1864,6 +1857,7 @@ a {
   margin-left: 52px;
 
   vertical-align: top;
+
   color: #ffffff;
   font-size: 16px;
   line-height: 18px;
@@ -1900,9 +1894,9 @@ a {
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 0;
 
   list-style-type: none;
 }
@@ -1939,6 +1933,7 @@ a {
   position: absolute;
   top: 3px;
   left: -25px;
+
   width: 12px;
   height: 12px;
 
@@ -1954,9 +1949,9 @@ a {
   width: 940px;
   margin: 0;
   margin-bottom: 20px;
-  padding-left: 28px;
   padding-top: 30px;
   padding-bottom: 28px;
+  padding-left: 28px;
 
   color: #32425c;
   font-size: 30px;
@@ -1990,9 +1985,9 @@ a {
   width: 100%;
   margin: 0;
   margin-bottom: 10px;
-  padding-left: 19px;
   padding-top: 11px;
   padding-bottom: 10px;
+  padding-left: 19px;
 
   font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 13px;
@@ -2045,8 +2040,8 @@ a {
 
   position: absolute;
   top: 40px;
-
   left: 40px;
+
   width: 160px;
 
   border: 1px solid #d7dcde;
@@ -2057,8 +2052,8 @@ a {
 
   position: absolute;
   top: 40px;
-
   left: 40px;
+
   width: 120px;
 
   border: 1px solid #00ca74;
@@ -2067,7 +2062,7 @@ a {
 .filter-price-range-dots span {
   position: absolute;
   top: 30px;
-  
+
   width: 20px;
   height: 22px;
 
@@ -2081,7 +2076,6 @@ a {
   content: "";
 
   position: relative;
-
   top: 11px;
   left: 8px;
 
@@ -2102,6 +2096,7 @@ a {
 .range-input {
   display: flex;
   justify-content: space-between;
+
   align-items: center;
 }
 
@@ -2156,6 +2151,7 @@ a {
 .filter-brands label,
 .filter-power label {
   position: relative;
+
   margin-bottom: 20px;
   padding-left: 35px;
 
@@ -2312,10 +2308,6 @@ a {
   list-style-type: none;
 }
 
-/* .sorting-type li{
-  border-bottom: 1px dotted #ee3643;
-} */
-
 .sorting-type li:nth-child(2n) {
   margin-left: 70px;
 }
@@ -2385,9 +2377,9 @@ a {
 
 .sorting-value a {
   position: absolute;
-
   top: -6px;
   left: -10px;
+
   width: 30px;
   height: 10px;
 
@@ -2520,9 +2512,9 @@ a {
   padding: 0;
   padding-top: 75px;
   padding-bottom: 70px;
+
   font-size: 30px;
   font-weight: 400;
-
   line-height: 30px;
 
   background-color: #ffffff;
@@ -2568,6 +2560,7 @@ a {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
   border: none;
 }
 
@@ -2630,14 +2623,14 @@ a {
   left: 50%;
   z-index: 6;
 
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 620px;
   height: 430px;
   margin-top: -215px;
   margin-left: -310px;
-  display: none;
 
   box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
   border-top: 7px solid #ee3643;
