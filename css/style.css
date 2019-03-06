@@ -127,7 +127,8 @@ a {
   height: 100%;
   width: 270px;
   padding-left: 48px;
-  padding-bottom: 3px;
+
+  line-height: 42px;
 
   background-color: inherit;
   border: none;
@@ -196,6 +197,18 @@ a {
 
   background-color: #ffffff;
 }
+
+.search-field:hover::-ms-value,
+.search-field:focus::-ms-value {
+  height: 42px;
+  margin-left: -48px;
+
+  color: #000000;
+
+  border-left: 48px solid #ffffff;
+  background-color: #ffffff;
+}
+
 
 .search-field:hover::-webkit-input-placeholder,
 .search-field:focus::-webkit-input-placeholder {
